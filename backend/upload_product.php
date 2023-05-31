@@ -14,5 +14,7 @@ if (isset($_FILES['img'])) {
     // Mover imagen a la carpeta uploads
     // move_uploaded_file($img['tmp_name'], "../proyecto_final/uploads".$img['name']);
     move_uploaded_file($img['tmp_name'], "../uploads/$img[name]");   
+    
+    header('Location: C:\xampp\htdocs\proyecto_final\portfolio\portfolio.php');
 }
 ?>

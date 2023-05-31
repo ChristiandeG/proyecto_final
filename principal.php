@@ -7,6 +7,7 @@
     <title>Pagina Principal</title>
 </head>
 <body>
+    
     <header>
         Redes sociales
 
@@ -16,7 +17,7 @@
     </section>
     <footer>
         <a href="principal.php"><button>Inicio</button></a>
-        <a href="portfolio.php"><button>Portfolio</button></a>
+        <a href="portfolio/portfolio.php"><button>Portfolio</button></a>
     </footer>
 </body>
 </html>

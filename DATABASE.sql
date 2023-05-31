@@ -5,7 +5,8 @@ CREATE TABLE users (
   nombre VARCHAR(256),
   dni VARCHAR(256),
   tipo ENUM ('premium', 'classic') NOT NULL
-  correo VARCHAR(256)
+  correo VARCHAR(256),
+  url VARCHAR (256)
 );
 
 CREATE TABLE compania (

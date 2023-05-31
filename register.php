@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
     $resultado_existe_user = mysqli_query($conn, $query);
     if (mysqli_num_rows($resultado_existe_user) >= 1) {
         // El correo ya existe y no se puede crear otra cuenta con ese nombre
-        header("Location: login.php");
+        header("Location: principal.php");
     } else {
         // Crear usuario en la base de datos
         $query_insert_new_user = "INSERT INTO users (nombre, tipo, correo, password, url) VALUES ('$nombre','$tipo','$correo','$password', '$url')";
@@ -38,7 +38,7 @@ if (isset($_POST['register'])) {
         // Utilizar las variables globales SESSION
         $_SESSION['user_id'] = $usuario["id_users"];
         $_SESSION['correo'] = $correo;
-        header("Location: login.php");
+        header("Location: principal.php");
     }
 }
 ?>
@@ -47,7 +47,6 @@ if (isset($_POST['register'])) {
     <div class="row">
         <div class="col-md-4 mx-auto">
             <h1 class="h1">Registro</h1>
-            <!-- <form action="register.php" method="POST"> -->
             <form action="backend\upload_product.php" method="POST" enctype="multipart/form-data">
             <div class="card card-body">
                 <label for ="tipo">Elige tu membresia</label>
@@ -67,16 +66,13 @@ if (isset($_POST['register'])) {
             </div>
             <div class="form-group">
                 <input type="file" name="img">
-                <!-- <input type="submit" value ="enviar"/> -->
             </div>
             <button class="btn btn-success" name="register">
                 Registrarse
             </button>
         </form>
         </br>
-        </form>
+        </div>
     </div>
 </div>
-</div>
-    </div>
-</div>
+
